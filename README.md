@@ -10,14 +10,9 @@ This project implements an autonomous coding agent that:
 - ✅ **Works without manual tweaks** for new banks
 - ✅ **Passes all tests** with robust error handling
 
-## 🏗️ Architecture
+## 🏗️ Architecture Diagram
 
-The agent follows a **Plan → Generate → Test → Self-Fix** loop:
-
-1. **Plan**: Analyzes PDF/CSV structure and creates implementation strategy
-2. **Generate**: Writes parser code using LLM based on the plan  
-3. **Test**: Validates parser output against expected CSV format
-4. **Self-Fix**: Debugs and corrects issues (up to 3 attempts)
+![Architecture Diagram](ai-agent-challenge-main/data/icici/generated-image.png)
 
 ## 🚀 Quick Start (5 steps)
 
@@ -74,8 +69,6 @@ python agent.py --target icici --api-key YOUR_KEY --model gemini-1.5-pro
 
 ## 📤 Output
 
-## 📤 Output
-
 The agent generates `custom_parsers/{bank}_parser.py` with:
 - `parse(pdf_path: str) -> pd.DataFrame` function
 - Robust error handling and data validation
@@ -95,9 +88,6 @@ The agent generates `custom_parsers/{bank}_parser.py` with:
 - Gemini API key (free tier: 50 requests/day)
 - PDF files and expected CSV output for training
 
-## 🏗️ Architecture Diagram
-
-![Architecture Diagram](ai-agent-challenge-main/data/icici/generated-image.png)
 
 ## 🎯 Challenge Requirements Met
 
